@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDIA-lab</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-name"><h1>HOTEL CONTACT FORM</h1></div>
+      <nav class="nav-lists">
+        <ul>
+          <li>
+            <a href="https://github.com/junnoiri/cis-376-HOTEL" target="_blank"
+              >See the Code</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://gist.github.com/barrycumbie/892372aa45634b0a28b7354ea076bac6"
+              target="_blank"
+              >Story Card</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fjunnoiri.github.io%2Fcis-376-HOTEL%2F"
+              target="_blank"
+              >Validity Checker</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger-menu">
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="text-center my-5">Give me your idea!!</h1>
+            <form action="#" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="remember"
+                  />
+                  Remember me
+                </label>
+              </div>
+              <div class="mb-3">
+                <div>What is your favorite country's food?</div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="optradio"
+                    id="radio1"
+                    value="Italy"
+                  />Italy
+                  <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="optradio"
+                    id="radio2"
+                    value="France"
+                  />France
+                  <label class="form-check-label" for="radio2"></label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="optradio"
+                    id="radio3"
+                    value="Spain"
+                  />Spain
+                  <label class="form-check-label" for="radio3"></label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="optradio"
+                    id="radio4"
+                    value="Japan"
+                  />Japan
+                  <label class="form-check-label" for="radio4"></label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="optradio"
+                    id="radio5"
+                    value="India"
+                  />India
+                  <label class="form-check-label" for="radio5"></label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="optradio"
+                    id="radio6"
+                    value="United States"
+                  />United States
+                  <label class="form-check-label" for="radio6"></label>
+                </div>
+                <select
+                  id="foodOption"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option selected>Please select one country from above</option>
+                </select>
+                <div id="selectedFood"></div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label"
+                  >Please tell me why you like the food</label
+                >
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" id="btnLoadData">
+                  Load my data
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-8" id="food-container"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p class="copyright">&copy; 2023 Junnosuke Noiri. All rights reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/ajax.js"></script>
+  </body>
+</html>
