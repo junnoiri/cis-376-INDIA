@@ -38,7 +38,7 @@ $(function () {
 
     // send a POST request
     $.ajax({
-      url: "test.json",
+      url: "https://junnoiri.github.io/cis-376-INDIA/test.json",
       type: "POST",
       data: jsonData,
       dataType: "json",
