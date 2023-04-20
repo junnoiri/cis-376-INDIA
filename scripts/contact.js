@@ -1,8 +1,13 @@
+$(function () {
+  getRadiovalue();
+});
+
 // The function that retrieves the value from a radio button
 // and displays the options in the dropdown menu according to that value
-$(function () {
+function getRadiovalue() {
   $("input[type=radio]").on("change", function () {
     let selectedRadio = $("input[type=radio]:checked").val();
+    console.log(selectedRadio);
     let foodArray = getValue(selectedRadio);
     console.log(foodArray);
 
@@ -15,46 +20,7 @@ $(function () {
 
     $("#foodOption").empty().append(optionList);
   });
-
-  // When the submit button is clicked, get the data from the form and send the data to a json file using Jquery's POST method
-  $("form").submit(function (e) {
-    console.log("button is clicked");
-
-    // cancel the default submission of the form
-    e.preventDefault();
-
-    // get form data
-    var formData = {
-      name: $("input[name=name]").val(),
-      email: $("input[name=email]").val(),
-      password: $("input[name=password]").val(),
-      country: $("input[name=country]").val(),
-      food: $("input[name=food]").val(),
-      message: $("input[name=message]").val(),
-    };
-
-    // Convert form the data to JSON format
-    var jsonData = JSON.stringify(formData);
-
-    // send a POST request
-    $.ajax({
-      url: "https://junnoiri.github.io/cis-376-INDIA/test.json",
-      type: "POST",
-      data: jsonData,
-      dataType: "json",
-
-      // Processing on success
-      success: function (response) {
-        console.log(response);
-      },
-
-      // Processing on error
-      error: function (jqXHR, textStatus, errorThrown) {
-        console.log(textStatus, errorThrown);
-      },
-    });
-  });
-});
+}
 
 // The function to check the letter
 function getValue(letter) {
@@ -110,4 +76,9 @@ function getValue(letter) {
   } else {
     return ["please select a country"];
   }
+}
+
+// The function is to reload the page
+function reloadPage() {
+  location.reload();
 }
