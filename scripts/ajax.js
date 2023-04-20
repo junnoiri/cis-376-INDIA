@@ -59,7 +59,7 @@ $("#submitBtn").on("click", function (e) {
                   <p class="private-password">Password: ${password}<p>\
                   <p class="private-country">Country: ${country}<p>\
                   <p class="private-food">Your favorite food: ${food}<p>\
-                  <p class="private-feedback">Message: ${message}<p>\
+                  <p class="private-feedback">The reason why you like it: ${message}<p>\
                 </div>`;
 
     $("#main-container").append(el);
